@@ -1,0 +1,28 @@
+.about1 {
+  background-image: url("../../assets/images/about1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 400px;
+}
+
+.about2 {
+  margin-top: -56px;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.head {
+  background-image: url("../../assets/images/rectangle.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 35px;
+  padding-left: 17px;
+  padding-top: 4px;
+}
+
+.head2 {
+  height: 35px;
+  padding-left: 17px;
+}
