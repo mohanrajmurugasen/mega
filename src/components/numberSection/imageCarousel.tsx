@@ -3,6 +3,7 @@ import { Carousel, initTE } from "tw-elements";
 import postTension1 from "../../assets/images/postTension1.png";
 import postTension2 from "../../assets/images/postTension2.png";
 import postTension3 from "../../assets/images/postTension3.png";
+import postTension4 from "../../assets/images/postTension4.png";
 
 const MyCarousel = () => {
   useEffect(() => {
@@ -45,6 +46,13 @@ const MyCarousel = () => {
           className="mx-[3px] box-content h-[4px] w-[4px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 3"
         ></button>
+        <button
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide-to="3"
+          className="mx-[3px] box-content h-[4px] w-[4px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          aria-label="Slide 4"
+        ></button>
       </div>
 
       {/* Carousel Items */}
@@ -57,7 +65,7 @@ const MyCarousel = () => {
           style={{ backfaceVisibility: "hidden" }}
         >
           <img
-            src={postTension1}
+            src={postTension4}
             className="block w-full h-full object-cover"
             alt="..."
           />
@@ -79,6 +87,15 @@ const MyCarousel = () => {
           style={{ backfaceVisibility: "hidden" }}
         >
           <img src={postTension3} className="block w-full h-full" alt="..." />
+        </div>
+
+        {/* Fourth item */}
+        <div
+          className="relative h-full float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-te-carousel-item
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <img src={postTension1} className="block w-full h-full" alt="..." />
         </div>
       </div>
     </div>

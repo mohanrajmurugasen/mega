@@ -1,15 +1,15 @@
 import { CaretRightOutlined } from "@ant-design/icons";
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import about2 from "../../assets/images/about2.png";
 import "./index.css";
 
 const About = () => {
   return (
     <div className="mt-8">
-      <div className="bg-[#FAF3ED] p-8">
+      <div className="bg-[#FAF3ED] p-10">
         <Row gutter={16}>
           <Col lg={12} md={12} sm={24} xs={24}>
-            <div className="text-3xl font-semibold mb-5">About Mega PT</div>
+            <div className="text-3xl font-bold mb-5">About Mega PT</div>
             <p className="text-sm text-[#783A35] mt-4">
               Mega PT's strong focus on post-tensioning, that delivers
               innovative solutions that enhance the structural integrity and
@@ -47,7 +47,7 @@ const About = () => {
         </Row>
         <div className="text-3xl font-semibold mt-14 mb-8">Why Mega PT?</div>
         <Row gutter={16}>
-          <Col lg={6} md={8} sm={24} xs={24} className="mb-14">
+          <Col lg={6} md={8} sm={24} xs={24} className="mb-12">
             <p className="text-base font-semibold text-[#783A35] mb-4 head">
               Innovative Solutions
             </p>
@@ -56,7 +56,7 @@ const About = () => {
               striking structures.
             </p>
           </Col>
-          <Col lg={6} md={8} sm={24} xs={24} className="mb-14">
+          <Col lg={6} md={8} sm={24} xs={24} className="mb-12">
             <p className="text-base font-semibold text-[#783A35] mb-4 head">
               Innovative Solutions
             </p>
@@ -65,7 +65,7 @@ const About = () => {
               striking structures.
             </p>
           </Col>
-          <Col lg={6} md={8} sm={24} xs={24} className="mb-14">
+          <Col lg={6} md={8} sm={24} xs={24} className="mb-12">
             <p className="text-base font-semibold text-[#783A35] mb-4 head">
               Innovative Solutions
             </p>
@@ -74,7 +74,7 @@ const About = () => {
               striking structures.
             </p>
           </Col>
-          <Col lg={6} md={8} sm={24} xs={24} className="mb-14">
+          <Col lg={6} md={8} sm={24} xs={24} className="mb-12">
             <p className="text-base font-semibold text-[#783A35] mb-4 head">
               Innovative Solutions
             </p>
@@ -84,11 +84,11 @@ const About = () => {
             </p>
           </Col>
         </Row>
-        <center>
+        {/* <center>
           <Button className="bg-[#783A35] font-semibold text-sm rounded-full text-white">
             See how
           </Button>
-        </center>
+        </center> */}
       </div>
     </div>
   );

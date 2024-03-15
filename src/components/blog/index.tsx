@@ -14,11 +14,11 @@ import Numbers from "../numbersComponent";
 
 const Blog = () => {
   const list = [
-    { head: "1000", foot: "Running Meter of P-T Cable installed" },
-    { head: "PT Beam", foot: "Scope Of Work" },
-    { head: "Sun Shela One", foot: "Project For" },
-    { head: "Residential", foot: "Project Type" },
-    { head: "2000", foot: "Square Ft. Area Covered" },
+    { head: "NA", foot: "Running Meter of P-T Cable installed" },
+    { head: "127.78 R. mt.", foot: "PT Beam" },
+    { head: "Yashnand Corporate Office", foot: "Project For" },
+    { head: "Commercial", foot: "Project Type" },
+    { head: "Ahmedabad", foot: "Location" },
   ];
   return (
     <div className="container m-auto">
