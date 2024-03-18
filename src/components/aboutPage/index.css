@@ -1,0 +1,44 @@
+.aboutSection .banner {
+  background-image: url("../../assets/images/Group2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutSection .banner button {
+  background: white;
+  border-radius: 34px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.aboutSection .banner img {
+  width: 50%;
+}
+
+.aboutSection .banner .leftContent .two {
+  max-width: 380px;
+}
+
+.aboutSection .section2 .one {
+  background-image: url("../../assets/images/Frame.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutSection .section2 .two {
+  background-image: url("../../assets/images/Frame1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutSection .section2 .three {
+  background-image: url("../../assets/images/Frame2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

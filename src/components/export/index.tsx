@@ -3,7 +3,7 @@ import React from "react";
 
 const Exports = () => {
   return (
-    <div className="bg-[#635C62] text-center flex items-center justify-center text-white p-2 text-sm cursor-pointer">
+    <div className="bg-[#27272a2e] text-center flex items-center justify-center text-[#ffffffbf] p-2 text-sm cursor-pointer">
       Mega PT Brochure (Free Download) <DownloadOutlined className="ml-2" />
     </div>
   );

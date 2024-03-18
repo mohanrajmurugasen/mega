@@ -25,7 +25,7 @@ const LayOut: React.FC<ComponentReceiverProps> = ({ componentProp }) => {
   return (
     <div>
       <Header />
-      <div style={{ height: screenHeight > 1023 ? 110 : 85 }}></div>
+      <div style={{ height: screenHeight > 1023 ? 110 : 108 }}></div>
       <div>{componentProp}</div>
       <Footer />
     </div>
