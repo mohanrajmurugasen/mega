@@ -1,0 +1,9 @@
+.ant-segmented-item-selected {
+  border: 1px solid #783a35;
+  color: #783a35 !important;
+  font-weight: 600;
+}
+
+.ant-segmented-item {
+  padding: 6px;
+}

@@ -14,7 +14,7 @@ const AboutPage = () => {
   const banner = () => {
     return (
       <div className="banner bg-[#783A35]">
-        <Exports />
+        <Exports color={"#ffffffbf"} />
         <div className="container m-auto">
           <div className="flex justify-between items-center">
             <div className="leftContent">

@@ -1,0 +1,47 @@
+.bannerContact {
+  background-image: url("../../assets/images/contactBanner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.contact input {
+  border: none;
+  border-bottom: 1px solid #783a3559;
+}
+
+.contact input:focus {
+  border: none;
+  border-bottom: 1px solid #783a3559;
+}
+
+.contact input:hover {
+  border: none;
+  border-bottom: 1px solid #783a3559;
+}
+
+.contact button {
+  color: white;
+  font-size: 16px;
+  background-color: #783a35;
+  font-weight: 400;
+  padding: 4px 45px;
+  border-radius: 40px;
+}
+
+.contact a {
+  color: #783a35;
+  text-decoration: underline;
+}
+
+.table-striped-rows tr:nth-child(2n) td {
+  background-color: #fcfaf8;
+}
+.table-striped-rows thead {
+  background-color: white;
+}
+.table-striped-rows thead th {
+  font-size: 18px;
+}
