@@ -42,6 +42,7 @@ const Banner = () => {
               src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
               className="block w-full h-full"
               alt="..."
+              style={{ objectFit: "cover" }}
             />
 
             <div
@@ -65,8 +66,9 @@ const Banner = () => {
           >
             <img
               src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-              className="block w-full"
+              className="block w-full h-full"
               alt="..."
+              style={{ objectFit: "cover" }}
             />
 
             <div
@@ -90,8 +92,9 @@ const Banner = () => {
           >
             <img
               src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-              className="block w-full"
+              className="block w-full h-full"
               alt="..."
+              style={{ objectFit: "cover" }}
             />
             <div
               className="absolute inset-x-[15%] top-1/3 hidden py-5 text-center text-white md:block m-auto"

@@ -4,9 +4,12 @@ import phone from "../../assets/images/phone.png";
 import SubHeader from "../subHeader";
 import { Divider } from "antd";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [hide, setHide] = useState(true);
+
+  const navigate = useNavigate();
 
   return (
     <div className="w-full fixed top-0 z-10">
@@ -49,7 +52,7 @@ const Header = () => {
             <div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a
-                  href="/login"
+                  href="/"
                   className="text-sm flex items-center leading-6 text-[rgb(55 47 53)] mr-5"
                 >
                   <img
@@ -61,7 +64,7 @@ const Header = () => {
                   Ahmedabad (Headquarters)
                 </a>
                 <a
-                  href="/login"
+                  href="/"
                   className="text-sm flex items-center leading-6 text-[rgb(55 47 53)]"
                 >
                   <img
@@ -115,40 +118,50 @@ const Header = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6 uppercase">
-                  <a
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  <div
+                    className="-mx-3 cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      navigate(`/`);
+                    }}
                   >
                     Home
-                  </a>
-                  <a
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  </div>
+                  <div
+                    className="-mx-3 cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      navigate(`/about`);
+                    }}
                   >
                     About
-                  </a>
-                  <a
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  </div>
+                  <div
+                    className="-mx-3 cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      navigate(`/services`);
+                    }}
                   >
                     Services
-                  </a>
-                  <a
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  </div>
+                  <div
+                    className="-mx-3 cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      navigate(`/project`);
+                    }}
                   >
                     Project
-                  </a>
-                  <a
-                    href="/"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  </div>
+                  <div
+                    className="-mx-3 cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => {
+                      navigate(`/contact`);
+                    }}
                   >
                     Contact US
-                  </a>
+                  </div>
                 </div>
                 <div className="py-6">
                   <a
-                    href="/login"
+                    href="/"
                     className="-mx-3 flex items-center rounded-lg px-3 py-2.5 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     data-cy="login"
                   >
@@ -161,7 +174,7 @@ const Header = () => {
                     Ahmedabad (Headquarters)
                   </a>
                   <a
-                    href="/login"
+                    href="/"
                     className="-mx-3 flex items-center rounded-lg px-3 py-2.5 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     data-cy="login"
                   >
