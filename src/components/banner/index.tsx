@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Carousel, initTE } from "tw-elements";
 import { Button } from "antd";
+import "./index.css";
+import Exports from "../export";
 
 const Banner = () => {
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
@@ -25,6 +27,7 @@ const Banner = () => {
 
   return (
     <div>
+      <Exports color={"white"} bg={"b6b9bb"} />
       <div
         id="carouselExampleCaptions"
         className="relative"
@@ -33,81 +36,67 @@ const Banner = () => {
       >
         <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
           <div
-            className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            className="relative carouselBanner float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-active
             data-te-carousel-item
-            style={{ backfaceVisibility: "hidden", height: screenHeight - 92 }}
+            style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-              className="block w-full h-full"
-              alt="..."
-              style={{ objectFit: "cover" }}
-            />
-
-            <div
-              className="absolute inset-x-[15%] top-1/3 hidden py-5 text-center text-white md:block m-auto"
-              style={{ maxWidth: "500px" }}
-            >
-              <h5 className="text-5xl font-semibold">Innovative Design</h5>
-              <p className="mt-4 mb-8 text-lg">
-                Your trusted partner in creating stronger, more efficient and
-                smarter buildings
-              </p>
-              <Button className="rounded-full bg-white text-base font-semibold h-10">
-                Get In Touch
-              </Button>
+            <div className="w-full h-full bg-[#0000005e]">
+              <div
+                className="absolute inset-x-[15%] top-1/4 py-5 text-center text-white md:block m-auto"
+                style={{ maxWidth: "500px" }}
+              >
+                <h5 className="text-5xl font-semibold">Innovative Design</h5>
+                <p className="mt-4 mb-8 text-lg">
+                  Your trusted partner in creating stronger, more efficient and
+                  smarter buildings
+                </p>
+                <Button className="rounded-full bg-white text-base font-semibold h-10 hover:bg-[#783A35] hover:!text-white hover:!border-[#783A35]">
+                  Get In Touch
+                </Button>
+              </div>
             </div>
           </div>
           <div
-            className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            className="relative carouselBanner2 float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            style={{ backfaceVisibility: "hidden", height: screenHeight - 92 }}
+            style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-              className="block w-full h-full"
-              alt="..."
-              style={{ objectFit: "cover" }}
-            />
-
-            <div
-              className="absolute inset-x-[15%] top-1/3 hidden py-5 text-center text-white md:block m-auto"
-              style={{ maxWidth: "500px" }}
-            >
-              <h5 className="text-5xl font-semibold">Innovative Design</h5>
-              <p className="mt-4 mb-8 text-lg">
-                Your trusted partner in creating stronger, more efficient and
-                smarter buildings
-              </p>
-              <Button className="rounded-full bg-white text-base font-semibold h-10">
-                Get In Touch
-              </Button>
+            <div className="w-full h-full bg-[#0000005e]">
+              <div
+                className="absolute inset-x-[15%] top-1/3 py-5 text-center text-white md:block m-auto"
+                style={{ maxWidth: "500px" }}
+              >
+                <h5 className="text-5xl font-semibold">Innovative Design</h5>
+                <p className="mt-4 mb-8 text-lg">
+                  Your trusted partner in creating stronger, more efficient and
+                  smarter buildings
+                </p>
+                <Button className="rounded-full bg-white text-base font-semibold h-10 hover:bg-[#783A35] hover:!text-white hover:!border-[#783A35]">
+                  Get In Touch
+                </Button>
+              </div>
             </div>
           </div>
           <div
-            className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            className="relative carouselBanner3 float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
             data-te-carousel-item
-            style={{ backfaceVisibility: "hidden", height: screenHeight - 92 }}
+            style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-              className="block w-full h-full"
-              alt="..."
-              style={{ objectFit: "cover" }}
-            />
-            <div
-              className="absolute inset-x-[15%] top-1/3 hidden py-5 text-center text-white md:block m-auto"
-              style={{ maxWidth: "500px" }}
-            >
-              <h5 className="text-5xl font-semibold">Innovative Design</h5>
-              <p className="mt-4 mb-8 text-lg">
-                Your trusted partner in creating stronger, more efficient and
-                smarter buildings
-              </p>
-              <Button className="rounded-full bg-white text-base font-semibold h-10">
-                Get In Touch
-              </Button>
+            <div className="w-full h-full bg-[#0000005e]">
+              <div
+                className="absolute inset-x-[15%] top-1/3 py-5 text-center text-white md:block m-auto"
+                style={{ maxWidth: "500px" }}
+              >
+                <h5 className="text-5xl font-semibold">Innovative Design</h5>
+                <p className="mt-4 mb-8 text-lg">
+                  Your trusted partner in creating stronger, more efficient and
+                  smarter buildings
+                </p>
+                <Button className="rounded-full bg-white text-base font-semibold h-10 hover:bg-[#783A35] hover:!text-white hover:!border-[#783A35]">
+                  Get In Touch
+                </Button>
+              </div>
             </div>
           </div>
         </div>

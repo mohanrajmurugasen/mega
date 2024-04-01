@@ -1,10 +1,16 @@
-import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 import Routing from "./Routes";
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
     <div className="App">
-      <Routing />
+      <Provider store={store}>
+        <Routing />
+      </Provider>
     </div>
   );
 }

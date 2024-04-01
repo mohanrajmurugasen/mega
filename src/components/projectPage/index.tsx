@@ -24,7 +24,7 @@ const ProjectPage = () => {
   const banner = () => {
     return (
       <div className="banner bg-[#FAF3ED]">
-        <Exports color={"black"} />
+        <Exports color={"black"} bg={"#27272a2e"} />
         <Row gutter={16} style={{ margin: 0 }} className="items-center">
           <Col lg={12} md={12} sm={24} xs={24}>
             <div className="p-6">

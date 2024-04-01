@@ -7,9 +7,9 @@
 }
 
 .about2 {
-  margin-top: -56px;
-  max-height: 400px;
-  object-fit: contain;
+  margin-top: -100px;
+  /* max-height: 400px; */
+  /* object-fit: contain; */
 }
 
 .head {
@@ -17,12 +17,11 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 35px;
   padding-left: 17px;
   padding-top: 4px;
 }
 
 .head2 {
-  height: 35px;
+  /* height: 35px; */
   padding-left: 17px;
 }

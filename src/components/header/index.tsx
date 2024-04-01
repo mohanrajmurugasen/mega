@@ -1,10 +1,10 @@
 import Logo from "../../assets/images/logo.png";
 import location from "../../assets/images/location.png";
-import phone from "../../assets/images/phone.png";
 import SubHeader from "../subHeader";
 import { Divider } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PhoneOutlined } from "@ant-design/icons";
 
 const Header = () => {
   const [hide, setHide] = useState(true);
@@ -58,8 +58,8 @@ const Header = () => {
                   <img
                     src={location}
                     alt="location"
-                    className="mr-1"
-                    style={{ width: 16 }}
+                    className="bg-[#783a35] p-1 rounded-full mr-2"
+                    style={{ width: 20 }}
                   />{" "}
                   Ahmedabad (Headquarters)
                 </a>
@@ -67,12 +67,7 @@ const Header = () => {
                   href="/"
                   className="text-sm flex items-center leading-6 text-[rgb(55 47 53)]"
                 >
-                  <img
-                    src={phone}
-                    alt="phone"
-                    className="mr-1"
-                    style={{ width: 16 }}
-                  />{" "}
+                  <PhoneOutlined className="bg-[#783a35] text-white p-1 rounded-full text-xs mr-2" />
                   +91 97268 82080
                 </a>
               </div>
@@ -168,8 +163,8 @@ const Header = () => {
                     <img
                       src={location}
                       alt="location"
-                      className="mr-1"
-                      style={{ width: 16 }}
+                      className="bg-[#783a35] p-1 rounded-full mr-2"
+                      style={{ width: 20 }}
                     />{" "}
                     Ahmedabad (Headquarters)
                   </a>
@@ -178,12 +173,7 @@ const Header = () => {
                     className="-mx-3 flex items-center rounded-lg px-3 py-2.5 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     data-cy="login"
                   >
-                    <img
-                      src={phone}
-                      alt="phone"
-                      className="mr-1"
-                      style={{ width: 16 }}
-                    />{" "}
+                    <PhoneOutlined className="bg-[#783a35] text-white p-1 rounded-full text-xs mr-2" />
                     +91 97268 82080
                   </a>
                 </div>

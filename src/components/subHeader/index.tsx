@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { RootState } from "../../store/store";
+import { headingChange } from "../../store/features/heading/heading";
 
 const SubHeader = () => {
-  const [active, setActive] = useState("HOME");
+  const heading = useSelector((state: RootState) => state.heading.value);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const list = ["home", "about", "services", "project", "contact"];
   return (
@@ -12,12 +15,12 @@ const SubHeader = () => {
           <div
             key={i}
             className={`cursor-pointer uppercase text-center ${
-              itm === active
+              itm === heading
                 ? "border-b-2 border-black font-semibold"
                 : "font-medium"
             } ml-4 w-28 text-black text-sm pb-2`}
             onClick={() => {
-              setActive(itm);
+              dispatch(headingChange(itm));
               navigate(`/${itm === "home" ? "" : itm}`);
             }}
           >

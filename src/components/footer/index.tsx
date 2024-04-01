@@ -6,12 +6,17 @@ import {
   InstagramFilled,
   LinkedinFilled,
 } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { headingChange } from "../../store/features/heading/heading";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className="bg-[#FAF3ED]">
       <div className="container m-auto p-6">
-        <Row gutter={16} className="mt-4">
+        <Row gutter={16} className="mt-4" style={{ margin: 0 }}>
           <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
             <img src={Logo} alt="logo" className="h-20" />
             <div className="text-2xl font-semibold text-black mb-2 mt-4">
@@ -21,57 +26,161 @@ const Footer = () => {
               Connect with Mega PT and get matched with the ideal solution for
               your needs. Book your appointment now!
             </div>
-            <div className="text-sm text-[#79140d] mb-2">
-              www.megaptsystem.com
+            <div>
+              <a
+                href="www.megaptsystem.com"
+                className="text-sm text-[#79140d] hover:text-[#79140d] mb-4"
+                target="_blank"
+              >
+                www.megaptsystem.com
+              </a>
             </div>
-            <div className="text-sm text-[#79140d] mb-2">
-              megaptsystem@gmail.com
+            <div>
+              <a
+                href="mailto:megaptsystem@gmail.com"
+                className="text-sm text-[#79140d] hover:text-[#79140d] mb-2"
+              >
+                megaptsystem@gmail.com
+              </a>
             </div>
             <div className="mt-4">
-              <LinkedinFilled className="text-2xl text-blue-900 mr-2" />
-              <InstagramFilled className="text-2xl text-red-500 mr-2" />
-              <FacebookFilled className="text-2xl text-blue-900 mr-2" />
+              <LinkedinFilled
+                className="text-2xl text-blue-900 mr-2 cursor-pointer"
+                onClick={() => {
+                  window.open("www.google.com");
+                }}
+              />
+              <InstagramFilled
+                className="text-2xl text-red-500 mr-2 cursor-pointer"
+                onClick={() => {
+                  window.open("www.google.com");
+                }}
+              />
+              <FacebookFilled
+                className="text-2xl text-blue-900 mr-2 cursor-pointer"
+                onClick={() => {
+                  window.open("www.google.com");
+                }}
+              />
             </div>
           </Col>
           <Col lg={18} md={18} sm={24} xs={24} className="mb-4">
-            <Row>
-              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
+            <Row gutter={16} style={{ margin: 0 }}>
+              <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
                 <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
                   Services
                 </div>
-                <div className="text-sm text-black mb-1">
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/services");
+                    dispatch(headingChange("services"));
+                  }}
+                >
                   Mega PT Design Solutions
                 </div>
-                <div className="text-sm text-black mb-1">FAQs</div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/services");
+                    dispatch(headingChange("services"));
+                  }}
+                >
+                  FAQs
+                </div>
               </Col>
-              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
+              <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
                 <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
                   PROJECTS
                 </div>
-                <div className="text-sm text-black mb-1">Project Types</div>
-                <div className="text-sm text-black mb-1">Success Stories</div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/project");
+                    dispatch(headingChange("project"));
+                  }}
+                >
+                  Project Types
+                </div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/project");
+                    dispatch(headingChange("project"));
+                  }}
+                >
+                  Success Stories
+                </div>
               </Col>
-              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
+              <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
                 <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
                   About
                 </div>
-                <div className="text-sm text-black mb-1">Who We Are</div>
-                <div className="text-sm text-black mb-1">Our Mission</div>
-                <div className="text-sm text-black mb-1">Our Vision</div>
-                <div className="text-sm text-black mb-1">Certifications</div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/about");
+                    dispatch(headingChange("about"));
+                  }}
+                >
+                  Who We Are
+                </div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/about");
+                    dispatch(headingChange("about"));
+                  }}
+                >
+                  Our Mission
+                </div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/about");
+                    dispatch(headingChange("about"));
+                  }}
+                >
+                  Our Vision
+                </div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/about");
+                    dispatch(headingChange("about"));
+                  }}
+                >
+                  Certifications
+                </div>
               </Col>
-              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
+              <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
                 <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
                   Contact Us
                 </div>
-                <div className="text-sm text-black mb-1">Contact Form</div>
-                <div className="text-sm text-black mb-1">Careers</div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/contact");
+                    dispatch(headingChange("contact"));
+                  }}
+                >
+                  Contact Form
+                </div>
+                <div
+                  className="text-sm text-black mb-1 cursor-pointer"
+                  onClick={() => {
+                    navigate("/contact");
+                    dispatch(headingChange("contact"));
+                  }}
+                >
+                  Careers
+                </div>
               </Col>
             </Row>
-            <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
+            <div className="text-base font-semibold text-[#79140d] uppercase mb-2 ml-2">
               Locate Us Here
             </div>
-            <Row gutter={16}>
+            <Row gutter={16} style={{ margin: 0 }}>
               <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
                 <div className="text-base font-semibold text-black mb-2">
                   Ahmedabad
@@ -113,7 +222,7 @@ const Footer = () => {
         </Row>
       </div>
       <Divider className="bg-gray-500 m-0" />
-      <div className="h-14 container m-auto pl-6 pr-6 flex justify-between items-center text-black text-sm">
+      <div className="h-14 pl-6 pr-6 flex justify-between items-center text-black text-sm">
         <div>2024 - Legal Mentions</div>
         <div className="flex items-center">
           <div>

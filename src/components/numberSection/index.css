@@ -1,0 +1,18 @@
+.toping {
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .toping {
+    margin-top: 0 !important;
+  }
+
+  .features {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.features {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
