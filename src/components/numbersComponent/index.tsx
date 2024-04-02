@@ -19,14 +19,16 @@ const Numbers = () => {
       }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const currentRef = counterRef.current; // Copy ref value to a variable
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     // Cleanup function to disconnect the observer
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
