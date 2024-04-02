@@ -24,5 +24,18 @@
   transform: rotateY(180deg);
 }
 
-.flip-box {
+.statics span {
+  color: white !important;
+}
+
+.statics2 span {
+  color: #783a35 !important;
+}
+
+.statics3 span {
+  color: #783a35 !important;
+}
+
+.statics4 span {
+  color: white !important;
 }
