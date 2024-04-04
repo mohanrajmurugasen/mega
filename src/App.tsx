@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <Routing />
+        <button className="inquiry">Inquiry Form</button>
       </Provider>
     </div>
   );

@@ -12,33 +12,46 @@
   font-size: 14px;
   font-weight: 600;
   margin-top: 16px;
+  border: 1px solid #783a35;
 }
 
-.aboutSection .banner img {
-  width: 50%;
+.aboutSection .banner button:hover {
+  color: white;
+  background-color: #783a35;
+  border: 1px solid white;
 }
 
 .aboutSection .banner .leftContent .two {
   max-width: 380px;
 }
 
-.aboutSection .section2 .one {
+.aboutSection .section2 {
   background-image: url("../../assets/images/Frame.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.aboutSection .section2 .two {
-  background-image: url("../../assets/images/Frame1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ISO {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-.aboutSection .section2 .three {
-  background-image: url("../../assets/images/Frame2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.ISO img {
+  height: 450px;
+  position: absolute;
+  top: -222px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .ISO img {
+    height: auto !important;
+    position: initial;
+    top: 0;
+  }
+
+  .ISO {
+    margin: 0;
+  }
 }
