@@ -1,0 +1,15 @@
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.wave-icon {
+  animation: wave 0.7s infinite;
+}

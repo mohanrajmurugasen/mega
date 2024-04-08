@@ -1,6 +1,10 @@
 import { Col, Divider, Row } from "antd";
 import Logo from "../../assets/images/logo.png";
 import Foot from "../../assets/images/foot.png";
+import F1 from "../../assets/images/f1.png";
+import F2 from "../../assets/images/f2.png";
+import F3 from "../../assets/images/f3.png";
+import F4 from "../../assets/images/f4.png";
 import {
   FacebookFilled,
   InstagramFilled,
@@ -14,12 +18,12 @@ const Footer = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (
-    <div className="bg-[#FAF3ED]">
+    <div className="bg-[#FAF3ED] pt-6">
       <div className="container m-auto p-6">
-        <Row gutter={16} className="mt-4" style={{ margin: 0 }}>
+        <Row gutter={32} className="mt-4" style={{ margin: 0 }}>
           <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
-            <img src={Logo} alt="logo" className="h-20" />
-            <div className="text-2xl font-semibold text-black mb-2 mt-4">
+            <img src={Logo} alt="logo" className="h-20 mt-1" />
+            <div className="text-2xl font-semibold text-black mb-2 mt-8">
               Let’s Talk
             </div>
             <div className="text-sm text-black mb-3">
@@ -64,10 +68,10 @@ const Footer = () => {
               />
             </div>
           </Col>
-          <Col lg={18} md={18} sm={24} xs={24} className="mb-4">
+          <Col lg={18} md={18} sm={24} xs={24} className="mb-1">
             <Row gutter={16} style={{ margin: 0 }}>
               <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
+                <div className="text-base font-semibold text-[#79140d] uppercase mb-4">
                   Services
                 </div>
                 <div
@@ -90,7 +94,7 @@ const Footer = () => {
                 </div>
               </Col>
               <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
+                <div className="text-base font-semibold text-[#79140d] uppercase mb-4">
                   PROJECTS
                 </div>
                 <div
@@ -113,7 +117,7 @@ const Footer = () => {
                 </div>
               </Col>
               <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
+                <div className="text-base font-semibold text-[#79140d] uppercase mb-4">
                   About
                 </div>
                 <div
@@ -154,7 +158,7 @@ const Footer = () => {
                 </div>
               </Col>
               <Col lg={4} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-[#79140d] uppercase mb-2">
+                <div className="text-base font-semibold text-[#79140d] uppercase mb-4">
                   Contact Us
                 </div>
                 <div
@@ -177,44 +181,72 @@ const Footer = () => {
                 </div>
               </Col>
             </Row>
-            <div className="text-base font-semibold text-[#79140d] uppercase mb-2 ml-2">
+            <div className="text-base font-semibold text-[#79140d] uppercase mb-5 ml-2">
               Locate Us Here
             </div>
-            <Row gutter={16} style={{ margin: 0 }}>
+            <Row gutter={24} style={{ margin: 0 }}>
               <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-black mb-2">
-                  Ahmedabad
-                </div>
-                <div className="text-sm text-black mb-6">
-                  401, S.G. Business Hub, Nr. Gota Bridge, S.G. Highway, Sola,
-                  Ahmedabad 382481. Gujarat
+                <div className="flex">
+                  <div className="w-20 h-14 mt-1">
+                    <img src={F1} alt="f1" className="object-cover" />
+                  </div>
+                  <div className="ml-2">
+                    <div className="text-base font-semibold text-black mb-2">
+                      Ahmedabad
+                    </div>
+                    <div className="text-sm text-black mb-6">
+                      401, S.G. Business Hub, Nr. Gota Bridge, S.G. Highway,
+                      Sola, Ahmedabad 382481. Gujarat
+                    </div>
+                  </div>
                 </div>
               </Col>
               <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-black mb-2">
-                  Nashik
-                </div>
-                <div className="text-sm text-black">
-                  Flat No. 3, Ramrajya Building no 7, Samarthnagar, Nasik
-                  422005, Maharashtra
-                </div>
-              </Col>
-              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-black mb-2">
-                  JAIPUR
-                </div>
-                <div className="text-sm text-black mb-6">
-                  Plot No. E-12, Amrapali Nagar, Gandhi Path West, Dhawas,
-                  Jaipur - 302021 + 91 9530017229
+                <div className="flex">
+                  <div className="w-20 h-14 mt-1">
+                    <img src={F2} alt="f2" className="object-cover" />
+                  </div>
+                  <div className="ml-2">
+                    <div className="text-base font-semibold text-black mb-2">
+                      Nashik
+                    </div>
+                    <div className="text-sm text-black">
+                      Flat No. 3, Ramrajya Building no 7, Samarthnagar, Nasik
+                      422005, Maharashtra
+                    </div>
+                  </div>
                 </div>
               </Col>
               <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
-                <div className="text-base font-semibold text-black mb-2">
-                  SURAT
+                <div className="flex">
+                  <div className="w-20 h-14 mt-1">
+                    <img src={F3} alt="f3" className="object-cover" />
+                  </div>
+                  <div className="ml-2">
+                    <div className="text-base font-semibold text-black mb-2">
+                      JAIPUR
+                    </div>
+                    <div className="text-sm text-black mb-6">
+                      Plot No. E-12, Amrapali Nagar, Gandhi Path West, Dhawas,
+                      Jaipur - 302021 + 91 9530017229
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm text-black">
-                  M - 28, 2nd Floor, VIP Plaza, VIP road, Near Shyam Baba
-                  Mandir, Vesu, Surat - 3959007 + 91 8905999277
+              </Col>
+              <Col lg={6} md={6} sm={24} xs={24} className="mb-4">
+                <div className="flex">
+                  <div className="w-20 h-14 mt-1">
+                    <img src={F4} alt="f4" className="object-cover" />
+                  </div>
+                  <div className="ml-2">
+                    <div className="text-base font-semibold text-black mb-2">
+                      SURAT
+                    </div>
+                    <div className="text-sm text-black">
+                      M - 28, 2nd Floor, VIP Plaza, VIP road, Near Shyam Baba
+                      Mandir, Vesu, Surat - 3959007 + 91 8905999277
+                    </div>
+                  </div>
                 </div>
               </Col>
             </Row>

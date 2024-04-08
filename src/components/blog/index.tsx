@@ -12,9 +12,11 @@ import PostTensioningSection from "../numberSection";
 import About from "../about";
 import Numbers from "../numbersComponent";
 import { useState } from "react";
+import "./index.css";
 
 const Blog = () => {
   const [posting, setPosting] = useState(false);
+  const [posting2, setPosting2] = useState(false);
   const list = [
     { head: "NA", foot: "Running Meter of P-T Cable installed" },
     { head: "127.78 R. mt.", foot: "PT Beam" },
@@ -64,44 +66,78 @@ const Blog = () => {
         <Row gutter={16} className="justify-center p-6" style={{ margin: 0 }}>
           <Col lg={11} md={11} sm={24} xs={24}>
             <div
-              className="bg-[#FAF3ED] mb-0 flex justify-center items-center"
+              className="bg-[#FAF3ED] mb-0 flex justify-center rounded-t-2xl"
               style={{ minHeight: "450px" }}
             >
-              <div className="w-4/5 pt-6 pb-6">
-                <div className="text-[#783A35] text-lg font-semibold">
-                  Unbonded Post-Tensioning
-                </div>
-                <ul className="text-base list-disc mt-8">
-                  <li className="mb-3">
-                    Unbonded post-tensioning strengthens concrete structures by
-                    employing a protective sheath or duct for steel tendons,
-                    ensuring durability and strength.{" "}
-                  </li>
-                  <li className="mb-3">
-                    Unlike bonded post-tensioning, which relies on bonding the
-                    tendons to the surrounding concrete, unbonded
-                    post-tensioning utilises a sheath or duct to protect the
-                    steel tendons.{" "}
-                  </li>
-                  <li className="mb-3">
-                    This technique offers several advantages, including improved
-                    corrosion protection, enhanced flexibility, and simplified
-                    maintenance.
-                  </li>
-                </ul>
-                <div className="text-base mt-8 text-[#783A35] cursor-pointer">
-                  Know More <CaretRightOutlined />
+              <div>
+                {!posting2 && (
+                  <img
+                    src={post}
+                    alt="post"
+                    className="object-cover w-full min-h-52 rounded-t-2xl"
+                    style={{ height: 140 }}
+                  />
+                )}
+                {posting2 && (
+                  <div
+                    className="text-5xl text-[#783A35]"
+                    style={{ marginTop: "-35px", marginLeft: 25 }}
+                  >
+                    <CaretUpOutlined onClick={() => setPosting2(false)} />
+                  </div>
+                )}
+                <div className="p-8">
+                  <div className="text-[#783A35] text-lg font-semibold">
+                    Unbonded Post-Tensioning
+                  </div>
+                  <div className="text-sm mt-8">
+                    {!posting2 ? (
+                      "Unbonded post-tensioning strengthens concrete structures by employing a protective sheath or duct for steel tendons, ensuring durability and strength."
+                    ) : (
+                      <>
+                        <ul className="text-base list-disc">
+                          <li className="mb-3">
+                            Unbonded post-tensioning strengthens concrete
+                            structures by employing a protective sheath or duct
+                            for steel tendons, ensuring durability and strength.{" "}
+                          </li>
+                          <li className="mb-3">
+                            Unlike bonded post-tensioning, which relies on
+                            bonding the tendons to the surrounding concrete,
+                            unbonded post-tensioning utilises a sheath or duct
+                            to protect the steel tendons.{" "}
+                          </li>
+                          <li className="mb-3">
+                            This technique offers several advantages, including
+                            improved corrosion protection, enhanced flexibility,
+                            and simplified maintenance.
+                          </li>
+                        </ul>
+                        <div className="text-base mt-8 text-[#783A35] cursor-pointer">
+                          Know More <CaretRightOutlined />
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-            <CaretDownOutlined
-              className="text-5xl"
-              style={{ marginTop: "-14px", color: "#faf3ed", float: "right" }}
-            />
+            {!posting2 && (
+              <CaretDownOutlined
+                className="text-5xl wave-icon"
+                style={{
+                  marginTop: "-14px",
+                  color: "#783A35",
+                  float: "right",
+                  marginRight: 25,
+                }}
+                onClick={() => setPosting2(true)}
+              />
+            )}
           </Col>
           <Col lg={11} md={11} sm={24} xs={24}>
             <div
-              className="bg-[#FAF3ED] mb-0 flex justify-center"
+              className="bg-[#FAF3ED] mb-0 flex justify-center rounded-t-2xl"
               style={{ minHeight: "450px" }}
             >
               <div>
@@ -109,16 +145,18 @@ const Blog = () => {
                   <img
                     src={post}
                     alt="post"
-                    className="object-cover w-full min-h-52"
+                    className="object-cover w-full min-h-52 rounded-t-2xl"
                     style={{ height: 140 }}
                   />
                 )}
-                <div
-                  className="text-4xl text-[#FAF3ED]"
-                  style={{ marginTop: "-29px" }}
-                >
-                  <CaretUpOutlined onClick={() => setPosting(false)} />
-                </div>
+                {posting && (
+                  <div
+                    className="text-5xl text-[#783A35]"
+                    style={{ marginTop: "-35px", marginLeft: 25 }}
+                  >
+                    <CaretUpOutlined onClick={() => setPosting(false)} />
+                  </div>
+                )}
                 <div className="p-8">
                   <div className="text-[#783A35] text-lg font-semibold">
                     Bonded Post-Tensioning
@@ -155,11 +193,18 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <CaretDownOutlined
-              className="text-5xl"
-              style={{ marginTop: "-14px", color: "#783A35", float: "right" }}
-              onClick={() => setPosting(true)}
-            />
+            {!posting && (
+              <CaretDownOutlined
+                className="text-5xl wave-icon"
+                style={{
+                  marginTop: "-14px",
+                  color: "#783A35",
+                  float: "right",
+                  marginRight: 25,
+                }}
+                onClick={() => setPosting(true)}
+              />
+            )}
           </Col>
         </Row>
       </div>
@@ -176,7 +221,7 @@ const Blog = () => {
         <div className="text-4xl font-semibold mb-6">Case Studies</div>
         <Row gutter={16} className="justify-center">
           <Col lg={8} md={8} sm={24} xs={24} className="mb-4">
-            <div className="rounded-t-2xl border">
+            <div className="rounded-t-2xl border shadows">
               <img
                 src={case1}
                 alt="post"
@@ -185,7 +230,7 @@ const Blog = () => {
               />
               <div
                 className="text-4xl text-white"
-                style={{ marginTop: "-29px" }}
+                style={{ marginTop: "-28px", marginLeft: 25 }}
               >
                 <CaretUpOutlined />
               </div>
@@ -204,7 +249,7 @@ const Blog = () => {
             </div>
           </Col>
           <Col lg={8} md={8} sm={24} xs={24} className="mb-4">
-            <div className="rounded-t-2xl border">
+            <div className="rounded-t-2xl border shadows">
               <img
                 src={case2}
                 alt="post"
@@ -213,7 +258,7 @@ const Blog = () => {
               />
               <div
                 className="text-4xl text-white"
-                style={{ marginTop: "-29px" }}
+                style={{ marginTop: "-28px", marginLeft: 25 }}
               >
                 <CaretUpOutlined />
               </div>
@@ -232,7 +277,7 @@ const Blog = () => {
             </div>
           </Col>
           <Col lg={8} md={8} sm={24} xs={24} className="mb-4">
-            <div className="rounded-t-2xl border">
+            <div className="rounded-t-2xl border shadows">
               <img
                 src={case3}
                 alt="post"
@@ -241,7 +286,7 @@ const Blog = () => {
               />
               <div
                 className="text-4xl text-white"
-                style={{ marginTop: "-29px" }}
+                style={{ marginTop: "-28px", marginLeft: 25 }}
               >
                 <CaretUpOutlined />
               </div>

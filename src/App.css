@@ -2,14 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes colorChange {
+  0% {
+    background-color: #e3cec0;
+    color: #783a35;
+  }
+  50% {
+    background-color: #783a35;
+    color: white;
+  }
+  100% {
+    background-color: #faf3ed;
+    color: #783a35;
+  }
+}
+
 .inquiry {
   position: fixed;
   transform: rotate(269deg);
   top: 50%;
   right: -43px;
   z-index: 9999;
-  background: #faf3edcf;
   padding: 4px 15px;
   border-radius: 6px;
   font-size: 15px;
+  animation: colorChange 2s infinite;
+  border: 1px solid #783a35;
+}
+
+.inquiry:hover {
+  background-color: #e3cec0 !important;
+  color: #783a35 !important;
+}
+
+body {
+  font-family: Roboto;
 }

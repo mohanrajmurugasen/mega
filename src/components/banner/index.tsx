@@ -27,13 +27,41 @@ const Banner = () => {
 
   return (
     <div>
-      <Exports color={"white"} bg={"b6b9bb"} />
       <div
         id="carouselExampleCaptions"
         className="relative"
         data-te-carousel-init
         data-te-ride="carousel"
       >
+        <div
+          className="absolute left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+          style={{ top: "70%" }}
+          data-twe-carousel-indicators
+        >
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="0"
+            data-te-carousel-active
+            className="mx-[3px] box-content h-[5px] w-[5px] rounded-2xl flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="1"
+            className="mx-[3px] box-content h-[5px] w-[5px] rounded-2xl flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-te-target="#carouselExampleCaptions"
+            data-te-slide-to="2"
+            className="mx-[3px] box-content h-[5px] w-[5px] rounded-2xl flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 3"
+          ></button>
+        </div>
         <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
           <div
             className="relative carouselBanner float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
@@ -41,6 +69,9 @@ const Banner = () => {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
+            <div className="absolute top-0 w-full">
+              <Exports color={"white"} bg={"b6b9bb"} />
+            </div>
             <div className="w-full h-full bg-[#0000005e]">
               <div
                 className="absolute inset-x-[15%] top-1/4 py-5 text-center text-white md:block m-auto"
@@ -62,9 +93,12 @@ const Banner = () => {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
+            <div className="absolute top-0 w-full">
+              <Exports color={"white"} bg={"b6b9bb"} />
+            </div>
             <div className="w-full h-full bg-[#0000005e]">
               <div
-                className="absolute inset-x-[15%] top-1/3 py-5 text-center text-white md:block m-auto"
+                className="absolute inset-x-[15%] top-1/4 py-5 text-center text-white md:block m-auto"
                 style={{ maxWidth: "500px" }}
               >
                 <h5 className="text-5xl font-semibold">Innovative Design</h5>
@@ -83,9 +117,12 @@ const Banner = () => {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden", height: screenHeight - 250 }}
           >
+            <div className="absolute top-0 w-full">
+              <Exports color={"white"} bg={"b6b9bb"} />
+            </div>
             <div className="w-full h-full bg-[#0000005e]">
               <div
-                className="absolute inset-x-[15%] top-1/3 py-5 text-center text-white md:block m-auto"
+                className="absolute inset-x-[15%] top-1/4 py-5 text-center text-white md:block m-auto"
                 style={{ maxWidth: "500px" }}
               >
                 <h5 className="text-5xl font-semibold">Innovative Design</h5>
