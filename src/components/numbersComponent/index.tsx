@@ -1,37 +1,9 @@
 import { CaretRightOutlined } from "@ant-design/icons";
 import { Col, Row } from "antd";
-import React, { useRef, useState, useEffect } from "react";
 import "./index.css";
 import Counter from "./counter";
 
 const Numbers = () => {
-  const counterRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update state based on whether the component is intersecting the viewport
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.5, // Trigger when at least 50% of the component is visible
-      }
-    );
-
-    const currentRef = counterRef.current; // Copy ref value to a variable
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    // Cleanup function to disconnect the observer
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
   return (
     <div>
       <Row gutter={16} style={{ margin: 0 }}>
@@ -44,7 +16,9 @@ const Numbers = () => {
           </div>
         </Col>
         <Col lg={16} md={18} sm={24} xs={24}>
-          <div ref={counterRef}>{isVisible && <Counter />}</div>
+          <div>
+            <Counter />
+          </div>
         </Col>
       </Row>
     </div>
