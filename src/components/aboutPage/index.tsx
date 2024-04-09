@@ -49,8 +49,8 @@ const AboutPage = () => {
           <Row style={{ margin: 0 }}>
             <Col lg={8} md={8} sm={0} xs={0}>
               <div className="one h-full relative">
-                <div className="p-8 flex justify-center">
-                  <div>
+                <div className="p-8 flex justify-end">
+                  <div className="pr-12">
                     <div className="text-[#290E0C] text-3xl font-semibold mb-3">
                       Who We Are
                     </div>
@@ -118,7 +118,7 @@ const AboutPage = () => {
           <Row style={{ margin: 0 }}>
             <Col lg={0} md={0} sm={24} xs={24}>
               <div className="two">
-                <div className="p-8 flex justify-start">
+                <div className="p-8 flex justify-center">
                   <div>
                     <div className="text-[#290E0C] text-3xl font-semibold mb-3">
                       Our Mission
@@ -132,7 +132,7 @@ const AboutPage = () => {
             </Col>
             <Col lg={8} md={8} sm={24} xs={24}>
               <div className="flex">
-                <div className="bg-[#FAF3ED] p-8 w-full min-h-40 flex items-center">
+                <div className="bg-[#FAF3ED] p-8 w-full min-h-56 flex items-center">
                   <div className="text-[#783A35] text-base font-semibold">
                     To become the performed supplier for engineering services
                     and integrated solutions to our valued customers in the
@@ -148,7 +148,7 @@ const AboutPage = () => {
             <Col lg={16} md={16} sm={0} xs={0}>
               <div className="two h-full relative">
                 <div className="p-8 flex justify-start">
-                  <div>
+                  <div className="pl-12">
                     <div className="text-[#290E0C] text-3xl font-semibold mb-3">
                       Our Mission
                     </div>
@@ -167,8 +167,8 @@ const AboutPage = () => {
           <Row style={{ margin: 0 }}>
             <Col lg={8} md={8} sm={0} xs={0}>
               <div className="three h-full relative">
-                <div className="p-8 flex justify-center bg-[#fffffff2]">
-                  <div>
+                <div className="p-8 flex justify-end bg-[#fffffff2]">
+                  <div className="pr-12">
                     <div className="text-[#290E0C] text-3xl font-semibold mb-3">
                       Our Vission
                     </div>
@@ -204,7 +204,7 @@ const AboutPage = () => {
                   className="text-[#FAF3ED] text-7xl"
                   style={{ marginRight: "-22px" }}
                 /> */}
-                <div className="bg-[#FAF3ED] p-8 w-full min-h-40 flex items-center">
+                <div className="bg-[#FAF3ED] p-8 w-full min-h-56 flex items-center">
                   <div className="text-[#783A35] text-base font-semibold">
                     To become leading organization, with providing through
                     innovative solution to the construction field. Our pledge is
@@ -230,7 +230,11 @@ const AboutPage = () => {
           <Col lg={12} md={12} sm={24} xs={24}>
             <div className="flex items-center mb-10">
               <div className="bg-[#F2E6DD] p-4 rounded mr-6">
-                <img src={frame4} alt="frame" className="w-full" />
+                <img
+                  src={frame4}
+                  alt="frame"
+                  className="w-full max-h-14 object-cover"
+                />
               </div>
               <div className="max-w-72">
                 <div className="text-[#290E0C] font-semibold text-xl">
@@ -246,7 +250,11 @@ const AboutPage = () => {
           <Col lg={12} md={12} sm={24} xs={24}>
             <div className="flex items-center mb-10">
               <div className="bg-[#F2E6DD] p-4 rounded mr-6">
-                <img src={frame4} alt="frame" className="w-full" />
+                <img
+                  src={frame4}
+                  alt="frame"
+                  className="w-full max-h-14 object-cover"
+                />
               </div>
               <div className="max-w-72">
                 <div className="text-[#290E0C] font-semibold text-xl">
@@ -262,7 +270,11 @@ const AboutPage = () => {
           <Col lg={12} md={12} sm={24} xs={24}>
             <div className="flex items-center mb-10">
               <div className="bg-[#F2E6DD] p-4 rounded mr-6">
-                <img src={frame5} alt="frame" className="w-full" />
+                <img
+                  src={frame5}
+                  alt="frame"
+                  className="w-full max-h-14 object-cover"
+                />
               </div>
               <div className="max-w-72">
                 <div className="text-[#290E0C] font-semibold text-xl">
@@ -278,7 +290,11 @@ const AboutPage = () => {
           <Col lg={12} md={12} sm={24} xs={24}>
             <div className="flex items-center mb-10">
               <div className="bg-[#F2E6DD] p-4 rounded mr-6">
-                <img src={frame6} alt="frame" className="w-full" />
+                <img
+                  src={frame6}
+                  alt="frame"
+                  className="w-full max-h-14 object-cover"
+                />
               </div>
               <div className="max-w-72">
                 <div className="text-[#290E0C] font-semibold text-xl">

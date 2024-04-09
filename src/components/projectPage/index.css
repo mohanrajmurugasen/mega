@@ -1,0 +1,7 @@
+.removeFooter .ant-modal-footer {
+  display: none !important;
+}
+
+.removeFooter .ant-modal-content {
+  padding: 0 !important;
+}
