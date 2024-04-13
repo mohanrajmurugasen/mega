@@ -5,15 +5,17 @@ import type { TableProps } from "antd";
 import type { RadioChangeEvent } from "antd";
 import {
   AreaChartOutlined,
+  CaretRightFilled,
   ClockCircleFilled,
   DingtalkCircleFilled,
-  FacebookOutlined,
-  InstagramOutlined,
-  LinkedinOutlined,
+  FacebookFilled,
+  InstagramFilled,
+  LinkedinFilled,
   SearchOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
 import SearchContact from "../../assets/images/searchContact.png";
+import Exports from "../export";
 
 interface DataType {
   key: string;
@@ -48,7 +50,7 @@ const ContactPage = () => {
               <div
                 key={i}
                 className={`${
-                  i === 0 ? "text-lg font-semibold" : "text-sm mb-1"
+                  i === 0 ? "text-base font-semibold" : "text-sm mb-1"
                 }`}
               >
                 {tag}
@@ -143,31 +145,123 @@ const ContactPage = () => {
 
   const banner = () => {
     return (
-      <div className="bannerContact p-8">
-        <div className="container m-auto">
-          <Row gutter={16} style={{ margin: 0 }} className="items-center">
+      <div className="bannerContact">
+        <Exports color={"white"} bg={"b6b9bb"} />
+        <div
+          className="container mb-44 laptop m-auto p-8"
+          style={{ maxHeight: 500 }}
+        >
+          <Row gutter={16} style={{ margin: 0 }}>
             <Col lg={12} md={12} sm={24} xs={24}>
-              <div>
-                <div className="text-4xl font-semibold text-white mb-3">
-                  Experience the difference!
+              <div className="relative" style={{ height: "70%" }}>
+                <div className="absolute top-0">
+                  <div className="text-4xl font-semibold text-white mb-3">
+                    Experience the difference!
+                  </div>
+                  <div className="text-white text-lg mb-6">
+                    Achieve exceptional structural strength and durability with
+                    our proven post-tensioning methods. Get in touch with us.
+                  </div>
+                  <div className="text-white mb-2">
+                    Call us at +91 97268 82080 or connect with us on
+                  </div>
+                  <div className="text-white text-lg mb-4">
+                    <FacebookFilled className="mr-4 cursor-pointer" />
+                    <TwitterOutlined className="mr-4 cursor-pointer" />
+                    <InstagramFilled className="mr-4 cursor-pointer" />
+                    <LinkedinFilled className="cursor-pointer" />
+                  </div>
                 </div>
-                <div className="text-white text-lg mb-6">
-                  Achieve exceptional structural strength and durability with
-                  our proven post-tensioning methods. Get in touch with us.
-                </div>
-                <div className="text-white mb-2">
-                  Call us at +91 97268 82080 or connect with us on
-                </div>
-                <div className="text-white text-lg mb-4">
-                  <LinkedinOutlined className="mr-4" />
-                  <TwitterOutlined className="mr-4" />
-                  <InstagramOutlined className="mr-4" />
-                  <FacebookOutlined />
+                <div className="absolute bottom-0 text-white">
+                  <div className="cursor-pointer">
+                    Looking for an opportunity? Work with us!{" "}
+                    <CaretRightFilled />
+                  </div>
                 </div>
               </div>
             </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <div className="bg-[#FCFAF8] p-8 contact rounded-lg">
+                <div className="text-lg font-semibold mb-6 text-[#783A35]">
+                  Contact Us.
+                </div>
+                <Input
+                  placeholder="Name"
+                  className="mb-6 bg-transparent focus:bg-transparent hover:bg-transparent text-[#783A35]"
+                />
+                <Input
+                  placeholder="Company Name"
+                  className="mb-6 bg-transparent focus:bg-transparent hover:bg-transparent text-[#783A35]"
+                />
+                <Input
+                  placeholder="Company Email"
+                  className="mb-6 bg-transparent focus:bg-transparent hover:bg-transparent text-[#783A35]"
+                />
+                <Input
+                  placeholder="Phone Number"
+                  className="mb-6 bg-transparent focus:bg-transparent hover:bg-transparent text-[#783A35]"
+                />
+                <Radio.Group onChange={onChange} value={value}>
+                  <Radio value={1}>
+                    <div className="text-[#783A35]">Structural Consultant</div>
+                  </Radio>
+                  <Radio value={2}>
+                    <div className="text-[#783A35]">Architect</div>
+                  </Radio>
+                </Radio.Group>
+                <TextArea
+                  placeholder="Write your message.."
+                  allowClear
+                  rows={4}
+                  className="mt-6 bg-transparent focus:bg-transparent hover:bg-transparent text-[#783A35] border-[#783a3559]"
+                />
+
+                <div className="mt-6 mb-6">
+                  <center>
+                    <button>Send</button>
+                  </center>
+                </div>
+                <center>
+                  <a href="#d" className="cursor-pointer mb-6">
+                    Just want to send us a regular email? No problem
+                  </a>
+                </center>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <div className="mobile m-auto p-4">
+          <Row gutter={16} style={{ margin: 0 }}>
+            <Col lg={12} md={12} sm={24} xs={24}>
+              <div>
+                <div>
+                  <div className="text-4xl font-semibold text-white mb-3">
+                    Experience the difference!
+                  </div>
+                  <div className="text-white text-lg mb-6">
+                    Achieve exceptional structural strength and durability with
+                    our proven post-tensioning methods. Get in touch with us.
+                  </div>
+                  <div className="text-white mb-2">
+                    Call us at +91 97268 82080 or connect with us on
+                  </div>
+                  <div className="text-white text-lg mb-4">
+                    <FacebookFilled className="mr-4 cursor-pointer" />
+                    <TwitterOutlined className="mr-4 cursor-pointer" />
+                    <InstagramFilled className="mr-4 cursor-pointer" />
+                    <LinkedinFilled className="cursor-pointer" />
+                  </div>
+                </div>
+                <div className="text-white mt-6">
+                  <div className="cursor-pointer">
+                    Looking for an opportunity? Work with us!{" "}
+                    <CaretRightFilled />
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col lg={12} md={12} sm={24} xs={24}>
+              <div className="bg-[#FCFAF8] p-8 mt-8 mb-4 contact rounded-lg">
                 <div className="text-lg font-semibold mb-6 text-[#783A35]">
                   Contact Us.
                 </div>
@@ -225,21 +319,21 @@ const ContactPage = () => {
       <div className="bg-[#783A35] p-6 pt-8 text-white">
         <div className="container m-auto">
           <Row gutter={16} style={{ margin: 0 }} className="items-center">
-            <Col lg={8} md={8} sm={0}>
+            <Col lg={8} md={8} sm={0} xs={0}>
               <div className="mb-4">
                 <div className="text-3xl font-semibold mb-2">Work with us.</div>
                 <div>Unlock your full potential by joining MegaPT.</div>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24}>
+            <Col lg={0} md={0} sm={24} xs={24}>
               <div className="mb-4 text-center">
                 <div className="text-3xl font-semibold mb-2">Work with us.</div>
                 <div>Unlock your full potential by joining MegaPT.</div>
               </div>
             </Col>
-            <Col lg={16} md={16} sm={24}>
+            <Col lg={16} md={16} sm={24} xs={24}>
               <Row gutter={16} style={{ margin: 0 }}>
-                <Col lg={8} md={8} sm={24}>
+                <Col lg={8} md={8} sm={24} xs={24}>
                   <div className="text-center mb-4">
                     <div className="text-2xl mb-2">
                       <ClockCircleFilled />
@@ -251,7 +345,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </Col>
-                <Col lg={8} md={8} sm={24}>
+                <Col lg={8} md={8} sm={24} xs={24}>
                   <div className="text-center mb-4">
                     <div className="text-2xl mb-2">
                       <DingtalkCircleFilled />
@@ -262,7 +356,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </Col>
-                <Col lg={8} md={8} sm={24}>
+                <Col lg={8} md={8} sm={24} xs={24}>
                   <div className="text-center mb-4">
                     <div className="text-2xl mb-2">
                       <AreaChartOutlined />
@@ -283,27 +377,35 @@ const ContactPage = () => {
 
   const section2 = () => {
     return (
-      <div className="p-6">
+      <div className="p-6 section2">
         <div className="container m-auto mt-6 mb-6">
           <div className="mb-6 text-3xl font-semibold">
             Career Opportunities
           </div>
           <Row gutter={16} style={{ margin: 0 }}>
-            <Col lg={12} md={12} sm={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <div className="mb-3 text-lg font-semibold">
                 Find purpose where your efforts stand tall.
               </div>
             </Col>
-            <Col lg={12} md={12} sm={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <div className="flex items-center">
-                <div className="border-[#783A35] border p-2 h-8 flex items-center rounded-full mr-3 mb-3 text-[#783A35] cursor-pointer">
-                  <SearchOutlined />
-                </div>
-                <div
+                {/* <div
                   className="bg-gray-500 h-6 mr-2 mb-3"
                   style={{ width: 2 }}
-                ></div>
+                ></div> */}
                 <Row gutter={16} style={{ margin: 0 }}>
+                  <Col>
+                    <div className="flex items-center">
+                      <div className="border-[#783A35] border p-2 h-8 flex items-center rounded-full mr-3 mb-3 text-[#783A35] cursor-pointer">
+                        <SearchOutlined />
+                      </div>
+                      <div
+                        className="bg-gray-500 h-5 mb-3 ml-1"
+                        style={{ width: 1 }}
+                      ></div>
+                    </div>
+                  </Col>
                   {filterData.map((itm, i) => (
                     <Col key={i}>
                       <div
@@ -329,6 +431,7 @@ const ContactPage = () => {
                 columns={columns}
                 dataSource={data}
                 className="table-striped-rows"
+                scroll={{ x: 800 }}
               />
             </div>
           ) : (

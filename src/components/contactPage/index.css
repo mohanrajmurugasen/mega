@@ -3,8 +3,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  align-items: center;
 }
 
 .contact input {
@@ -36,7 +34,7 @@
   text-decoration: underline;
 }
 
-.table-striped-rows tr:nth-child(2n) td {
+.table-striped-rows tr:nth-child(odd) td {
   background-color: #fcfaf8;
 }
 .table-striped-rows thead {
@@ -44,4 +42,23 @@
 }
 .table-striped-rows thead th {
   font-size: 18px;
+}
+
+.bannerContact .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .bannerContact .laptop {
+    display: none;
+  }
+
+  .bannerContact .mobile {
+    display: block;
+  }
+}
+
+.section2 thead .ant-table-cell {
+  background: none !important;
+  border-bottom: none !important;
 }
